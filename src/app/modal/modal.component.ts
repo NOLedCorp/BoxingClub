@@ -20,7 +20,6 @@ export class ModalComponent implements OnInit {
 
   ngOnInit() {
     this.ms.modal = this.modal;
-    
   }
 
 }

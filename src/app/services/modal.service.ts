@@ -5,18 +5,18 @@ import { TemplateRef, Injectable } from '@angular/core';
 export class ModalService{
     modalRef: BsModalRef;
     modal:TemplateRef<any>;
-    type:string;
+    sectionId:string;
     
     constructor(private modalService: BsModalService){
 
     }
     
     close(){
-        this.type = "";
+        this.sectionId = "";
         this.modalRef.hide();
     }
-    open(type){
-        this.type = type;
+    open(s){
+        this.sectionId=s;
         this.modalRef = this.modalService.show(this.modal);
     }
 }

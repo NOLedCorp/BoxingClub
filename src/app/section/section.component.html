@@ -1,0 +1,20 @@
+
+<div *ngIf="section" class="container mt-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="{{section.Image}}" class="w-100">
+    </div>
+    <div class="col-sm-7">
+      <div class="d-flex flex-column justify-content-between h-100">
+        <h3>{{section.Name}}</h3>
+        <div>
+          <p>Адрес: {{section.Adress}}</p>
+          <p>Цена: {{section.Price}}₽/ мес.</p>
+          <button class="btn btn-success" (click)="ms.open(section.SectionId)">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="my-4">Описание</h3>
+  <p>{{section.Description}}</p>
+</div>

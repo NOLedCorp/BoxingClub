@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { SectionService } from '../services/sections.service';
 
 @Component({
   selector: 'app-main-page',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.less']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
+  constructor(public sv:SectionService) {
+    
+   }
 
   ngOnInit() {
   }

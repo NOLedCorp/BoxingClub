@@ -1,8 +1,7 @@
 <ng-template class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" #modal>
 
   <div class="p-3">
-    <!-- <auth-form *ngIf="ms.type=='auth'"></auth-form>
-    <enter-form *ngIf="ms.type=='enter'"></enter-form> -->
+    <sign-up [sid]="ms.sectionId"></sign-up>
   </div>
   
   

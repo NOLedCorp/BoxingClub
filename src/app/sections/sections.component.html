@@ -1,68 +1,16 @@
-<div class="sections my-4">
+<div class="sections my-4" #sections>
   <div class="container d-flex flex-wrap align-items-center justify-content-between">
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
+    <div class="card" style="width: 18rem;" *ngFor="let s of ss.sections">
+      <img src="{{s.Image}}" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
+        <h5 class="card-title">{{s.Name}}</h5>
         
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        <a routerLink="/section/{{s.SectionId}}" class="btn btn-primary">Подробнее</a>
+        <a routerLink="/update-section/{{s.SectionId}}" class="btn btn-link">Изменить</a>
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../../assets/images/box.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Название карточки</h5>
-        
-        <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-      </div>
-    </div>
+    
   </div>
 </div>
+
+

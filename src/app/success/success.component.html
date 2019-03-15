@@ -1,0 +1,11 @@
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="height: 80vh;" *ngIf="deal">
+  <h2 style="text-align:center">{{deal.Name}}!</h2>
+  <p>Вы успешно записались на курс: {{deal.Section.Name}}</p>
+  <p>Занятия будут проходить Пн- Пт: 08.00 - 22.00 Сб- Вс: 09.00- 19.00</p>
+  <p>По адресу: {{deal.Section.Adress}}</p>
+  <br>
+  <h3 >До встречи!</h3>
+  <button class="btn btn-primary mt-4" [routerLink]='["/"]'>На главную</button>
+
+</div>

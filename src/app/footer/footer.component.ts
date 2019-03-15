@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SectionService } from '../services/sections.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.less']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  constructor(private ss:SectionService) { }
 
   ngOnInit() {
+  }
+  showSections(){
+    window.scrollTo(0,this.ss.section.nativeElement.offsetTop);
   }
 
 }

@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="sectionForm" *ngIf="section">
+        <h3 class="text-center" style="font-weight:400">Изменение секции</h3>
+        <div class="form-group">
+          <label for="na" >Название</label>
+          <input  formControlName="Name" class="form-control" id="na" placeholder="Название секции">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" >Цена</label>
+            <input  formControlName="Price" type="number" class="form-control" id="exampleInputEmail1" placeholder="Цена секции">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPhone1" >Адрес</label>
+            <input  formControlName="Adress" class="form-control" type="text" placeholder="Адрес проведения">
+        </div>
+        <div class="form-group">
+            <label for="DES">Описание</label>
+            <textarea formControlName="Description" class="form-control" rows="5" id="DES" placeholder="Описание"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="Update()" *ngIf="check()">Изменить</button>
+      </form>
+</div>

@@ -15,6 +15,11 @@ import { SectionsComponent } from './sections/sections.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalService } from './services/modal.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SectionService } from './services/sections.service';
+import { SectionComponent } from './section/section.component';
+import { SuccessComponent } from './success/success.component';
+import { ChangeSectionComponent } from './change-section/change-section.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,17 +27,22 @@ import { ModalService } from './services/modal.service';
     MainPageComponent,
     SectionsComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    SignUpComponent,
+    SectionComponent,
+    SuccessComponent,
+    ChangeSectionComponent
     
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     ModalModule.forRoot()
   ],
-  providers: [FormBuilder, HttpClient, ModalService, BsModalService],
+  providers: [FormBuilder, HttpClient, ModalService, BsModalService, SectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
