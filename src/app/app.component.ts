@@ -19,6 +19,9 @@ export class AppComponent implements OnInit{
       if(evt.url=='/success'){
         this.showFooter=false;
       }
+      else{
+        this.showFooter=true;
+      }
      
       window.scrollTo(0, 0)
      });
